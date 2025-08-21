@@ -170,22 +170,32 @@
       <p id="form-status"></p>
     </form>
   </section>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("uBChcjJWC1CMb2XgS");
+  })();
 
-  <script>
-    function opentab(tabname, event) {
-      const tablinks = document.querySelectorAll('.tab-links');
-      const tabcontents = document.querySelectorAll('.tab-contents');
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      tablinks.forEach(link => link.classList.remove('active-link'));
-      tabcontents.forEach(tab => tab.classList.remove('active-tab'));
+    emailjs.sendForm("service_6ghubwh", "template_prh34aq", this)
+      .then(() => {
+        document.getElementById("form-status").textContent = "Message sent successfully!";
+        this.reset();
+      }, (error) => {
+        document.getElementById("form-status").textContent = "Failed to send message. Please try again.";
+        console.error(error);
+      });
+  });
+</script>
 
-      event.currentTarget.classList.add('active-link');
-      document.getElementById(tabname).classList.add('active-tab');
-    }
-  </script>
+
+
 
 </body>
 </html>
+
 
 
 
