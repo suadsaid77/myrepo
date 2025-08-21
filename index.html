@@ -160,15 +160,14 @@
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <h2>Contact <span>Me</span></h2>
-    <form id="contactForm">
-      <div class="input-group">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-      </div>
-      <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-      <p id="form-status"></p>
-    </form>
+      <form action="https://formsubmit.co/youremail@example.com" method="POST" id="contactForm">
+  <div class="input-group">
+    <input type="text" name="name" id="name" placeholder="Your Name" required>
+    <input type="email" name="email" id="email" placeholder="Your Email" required>
+  </div>
+  <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">Send Message</button>
+</form>
   </section>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
@@ -195,6 +194,7 @@
 
 </body>
 </html>
+
 
 
 
