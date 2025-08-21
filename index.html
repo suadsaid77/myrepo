@@ -158,33 +158,39 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact <span>Me</span></h2>
-      <form action="https://formsubmit.co/youremail@example.com" method="POST" id="contactForm">
-  <div class="input-group">
-    <input type="text" name="name" id="name" placeholder="Your Name" required>
-    <input type="email" name="email" id="email" placeholder="Your Email" required>
-  </div>
-  <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
-  <button type="submit" class="btn">Send Message</button>
-</form>
-  </section>
+ <section class="contact" id="contact">
+  <h2>Contact <span>Me</span></h2>
+  <form id="contactForm">
+    <div class="input-group">
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+    </div>
+    <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+    <p id="form-status"></p> <!-- ✅ Add this line -->
+  </form>
+</section>
+
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-  (function(){
-    emailjs.init("uBChcjJWC1CMb2XgS");
+  (function() {
+    emailjs.init("uBChcjJWC1CMb2XgS"); // ✅ Your actual PUBLIC KEY
   })();
 
   document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
+    const formStatus = document.getElementById("form-status");
+
     emailjs.sendForm("service_6ghubwh", "template_prh34aq", this)
       .then(() => {
-        document.getElementById("form-status").textContent = "Message sent successfully!";
+        formStatus.textContent = "✅ Message sent successfully!";
+        formStatus.style.color = "#7cf03d"; // green
         this.reset();
       }, (error) => {
-        document.getElementById("form-status").textContent = "Failed to send message. Please try again.";
-        console.error(error);
+        formStatus.textContent = "❌ Failed to send message. Please try again.";
+        formStatus.style.color = "red";
+        console.error("EmailJS error:", error);
       });
   });
 </script>
@@ -192,8 +198,10 @@
 
 
 
+
 </body>
 </html>
+
 
 
 
