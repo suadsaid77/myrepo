@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern CV Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="logo">Portfolio.</a>
+    <ul>
+      <li><a class="link active" href="#home">Home</a></li>
+      <li><a class="link" href="#about">About</a></li>
+      <li><a class="link" href="#portfolio">Portfolio</a></li>
+      <li><a class="link" href="#services">Services</a></li>
+      <li><a class="link" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-info">
+      <h1>Curriculum Vitae</h1>
+      <h2>Career Objective</h2>
+      <div class="animated-tags">
+        <span data-text="Education" style="--i:1;">Education</span>
+        <span data-text="Technical Skills" style="--i:2;">Technical Skills</span>
+        <span data-text="Training" style="--i:3;">Training</span>
+        <span data-text="Soft Skills" style="--i:4;">Soft Skills</span>
+      </div>
+      <p>Skilled in troubleshooting and diagnostics. Proficient in Java, C, Oracle, Media Tools, Visual Studio.</p>
+
+      <div class="btn-sci">
+        <a href="#" class="btn">Download CV</a>
+        <div class="sci">
+          <a href="#"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-img">
+      <div class="img-box">
+        <img src="photo/cv3.jpg" alt="Profile">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="sub-title">About Me</h2>
+      <div class="row">
+        <div class="about-col-1">
+          <img src="photo/cv20.webp" alt="About Me">
+        </div>
+        <div class="about-col-2">
+          <p>Soft skills and hobbies: Ability to work alone or in a group, good communication, reading, cooking, shopping.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Creating responsive websites</li>
+              <li><span>App Development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2020 - Present</span><br>UI/UX Designer at XYZ</li>
+              <li><span>2022</span><br>Web Developer at ABC</li>
+              <li><span>2018</span><br>Intern at TechCorp</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2019</span><br>B.Sc. in Computer Science</li>
+              <li><span>2022</span><br>Full Stack Developer Course</li>
+              <li><span>2023</span><br>UI/UX Design Certification</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="sub-title">My Services</h2>
+      <div class="services-list">
+        <div>
+          <h3>Web Design</h3>
+          <p>Responsive and visually appealing designs for websites.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <h3>UI/UX Design</h3>
+          <p>User-centered interfaces and smooth user experiences.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <h3>App Development</h3>
+          <p>Mobile apps for Android and iOS platforms.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2 class="sub-title">My Work</h2>
+      <div class="work-list">
+        <div class="work">
+          <img src="photo/cont55.jpg" alt="Work 1">
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>Connects you with talented people around the world.</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="photo/cvv2.jpg" alt="Work 2">
+          <div class="layer">
+            <h3>Music App</h3>
+            <p>Stream music and connect with artists worldwide.</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="photo/cv55.jpg" alt="Work 3">
+          <div class="layer">
+            <h3>Online Shopping App</h3>
+            <p>Shop products globally with ease and security.</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact <span>Me</span></h2>
+    <form id="contactForm">
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+      </div>
+      <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="form-status"></p>
+    </form>
+  </section>
+
+  <script>
+    function opentab(tabname, event) {
+      const tablinks = document.querySelectorAll('.tab-links');
+      const tabcontents = document.querySelectorAll('.tab-contents');
+
+      tablinks.forEach(link => link.classList.remove('active-link'));
+      tabcontents.forEach(tab => tab.classList.remove('active-tab'));
+
+      event.currentTarget.classList.add('active-link');
+      document.getElementById(tabname).classList.add('active-tab');
+    }
+  </script>
+
+</body>
+</html>
